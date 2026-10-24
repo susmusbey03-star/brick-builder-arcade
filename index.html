@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brick Builder Arcade</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="game-shell">
+      <header class="hud">
+        <div class="brand-wrap">
+          <div class="brand">Brick Builder</div>
+          <div class="subtitle">Infinity Arcade</div>
+        </div>
+
+        <div class="stats">
+          <div class="stat-box">
+            <span>Skor</span>
+            <strong id="score">0</strong>
+          </div>
+          <div class="stat-box">
+            <span>Seviye</span>
+            <strong id="level">1</strong>
+          </div>
+          <div class="stat-box">
+            <span>Hedef</span>
+            <strong id="target">80</strong>
+          </div>
+          <div class="stat-box">
+            <span>Can</span>
+            <strong id="lives">3</strong>
+          </div>
+        </div>
+      </header>
+
+      <main class="game-layout">
+        <aside class="panel left-panel">
+          <h2>Görev</h2>
+          <p id="objective">3 satır tamamla</p>
+          <div class="progress">
+            <div id="progressBar" class="progress-bar"></div>
+          </div>
+
+          <div class="controls-box">
+            <button id="startBtn" class="primary-btn">Oyunu Başlat</button>
+            <button id="restartBtn" class="secondary-btn">Yeniden Başla</button>
+          </div>
+
+          <div class="tips">
+            <h3>Kontroller</h3>
+            <ul>
+              <li>Sol / Sağ: taşı</li>
+              <li>Aşağı: hızlandır</li>
+              <li>Boşluk: döndür</li>
+              <li>Fare tıklama: yerleştir</li>
+            </ul>
+          </div>
+        </aside>
+
+        <section class="board-panel">
+          <canvas id="gameCanvas" width="420" height="620" aria-label="Oyun alanı"></canvas>
+        </section>
+
+        <aside class="panel right-panel">
+          <h2>Sonraki Blok</h2>
+          <canvas id="nextCanvas" width="150" height="150" aria-label="Sonraki blok önizleme"></canvas>
+
+          <div class="status-box">
+            <h3>Durum</h3>
+            <p id="statusText">Hazır</p>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
